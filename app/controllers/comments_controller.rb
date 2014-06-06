@@ -2,9 +2,7 @@
 class CommentsController < ApplicationController
 
 def create
-	  #testing for git hub
-	  #Added for testing 
- 	  @blog = Blog.find(params[:blog_id])
+	  @blog = Blog.find(params[:blog_id])
 	  @post =Post.find(params[:post_id])
 	  @comment =@post.comments.create(params[:comment])
 	  if @comment.save  
