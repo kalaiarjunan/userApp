@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       flash[:notice] = "Saved successfully"
-	    flash[:color]= "valid"
+      flash[:color]= "valid"
       redirect_to(:controller=>"sessions",:action => "login")
     else
 	    #render :text =>"<pre>"+ "Testing".to_yaml and return

@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
 
     def login_attempt
 		authorized_user = User.authenticate(params[:username],params[:login_password])
-		if authorized_user
+    		if authorized_user
 			session[:user_id] = authorized_user.id
 			flash[:notice] = "Welcome, you logged in as #{authorized_user.username}"
 			render "home"
@@ -21,5 +21,4 @@ class SessionsController < ApplicationController
     	flash[:notice] = "Logged out Successfullly."
     	redirect_to :action => 'login'
  	end
-
 end

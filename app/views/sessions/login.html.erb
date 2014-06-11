@@ -1,11 +1,14 @@
 
-<div>
+<div align ="center">
 <p id="notice"><%= notice %></p>
-		<h1>Log in</h1>
-	<%= form_tag(:controller =>"sessions", :action => "login_attempt") do %>
-		<p>Username:</br> <%= text_field_tag(:username) %></p>
-		<p>Password:</br> <%= password_field_tag :login_password %></p>
-		<%= submit_tag("Log in") %>
-	<% end %>
-
+                <h1>Log in</h1>
+        <%= form_tag(:controller =>"sessions", :action => "login_attempt") do %>
+<center>
+              <p>Username: <%= text_field_tag(:username) %></p>
+                <p>Password: <%= password_field_tag :login_password %></p>
+                <%= submit_tag("Log in") %>
+</center>
+        <% end %>
+</br>
 <%=link_to "New User", :controller => "users", :action => "new"%>
+</div>

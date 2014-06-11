@@ -11,5 +11,6 @@
 <p> Commentor:</br> <%= f.text_field :commentor%> </p>
 <p> Comments:</br> <%= f.text_field :comments%> </p>
 <%= f.submit :Comment %>
+<%= link_to 'Back', blog_path(@blog.id) %>
 <% end %>
 </div>

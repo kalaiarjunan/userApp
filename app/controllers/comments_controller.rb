@@ -14,7 +14,8 @@ def create
 end
 
 def new
- 	@comment = Comment.new
+	@blog = Blog.find(params[:blog_id])
+  	@comment = Comment.new
     	respond_to do |format|
       		format.html # new.html.erb
       		format.json { render json: @blog }

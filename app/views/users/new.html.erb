@@ -1,4 +1,4 @@
-<div>
+<div align ="center">
 <h2>Sign Up</h2>
 <%= form_for(:user, :url => {:controller => 'users', :action => 'create'}) do |f| %>
  	<% if @user.errors.any? %>
@@ -9,11 +9,17 @@
 	        </ul>
         </div>
  	<% end %>
-	<p> Username:</br> <%= f.text_field :username%> </p>
-	<p> Password:</br> <%= f.password_field :password%></p>
-	<p> Email:</br> <%= f.text_field :email%> </p>
-	<p> Mob:</br> <%= f.text_field :mobile%> </p>
-	<%= f.submit :Signup %>
+<table>
+	<tr><td> Username:</td>
+<td> <%= f.text_field :username%></td> </tr>
+
+	<tr><td> Password:</td><td> <%= f.password_field :password%></td></tr>
+
+	<tr><td> Email:</td><td> <%= f.text_field :email%></td> </tr>
+	<tr><td> Mob:</td><td> <%= f.text_field :mobile%></td> </tr>
+</br>
+<tr><td></td><td> <%= f.submit :Signup %></td></tr>
+</table>
 <% end %>
 </div>
 

@@ -11,6 +11,7 @@ class PostsController < ApplicationController
   end
   
   def new
+    @blog = Blog.find(params[:blog_id])
     @post = Post.new
     respond_to do |format|
       format.html # new.html.erb
